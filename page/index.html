@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Đồ án nhận dạng biển báo</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+		.logo {
+			font-size: 1.25rem;
+			text-transform: uppercase;
+			font-weight: 200;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar has-shadow is-dark">
+		<div class="navbar-brand">
+			<a class="navbar-item logo">
+				Nhận diện biển báo giao thông
+			</a>
+			<div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+
+		<div id="navbarExampleTransparentExample" class="navbar-menu">
+			<div class="navbar-end">
+				<a class="navbar-item ">
+					<span class="icon"><i class="fa fa-book"></i></span>
+					<span>Hướng dẫn</span>
+				</a>
+				<a class="navbar-item ">
+					<span class="icon"><i class="fa fa-info-circle"></i></span>
+					<span>Thông tin</span>
+				</a>
+				<a class="navbar-item ">
+					<span class="icon"><i class="fa fa-id-card"></i></span>
+					<span>Liên hệ</span>
+				</a>
+				<a class="navbar-item ">
+					<span class="icon"><i class="fab fa-github"></i></span>
+					<span>View on Github</span>
+				</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="hero">
+			<div class="hero-body ">
+				<div class="columns">
+					<div class="column is-4 is-offset-1">
+						<div class="field">
+							<label class="label">Chọn ảnh</label>
+							<div class="file is-info has-name">
+								<label class="file-label">
+									<input class="file-input" type="file" name="resume">
+									<span class="file-cta">
+										<span class="file-icon">
+											<i class="fas fa-upload"></i>
+										</span>
+										<span class="file-label">
+											Chọn file
+										</span>
+									</span>
+									<span class="file-name">
+										<span class="has-text-white">____________________</span>
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="field">
+							<img id="fileChoosePreview" src="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+
+		var indexrender = {
+			build: function () {
+
+				indexrender.addEventChooseImage();
+			},
+			addEventChooseImage: function () {
+
+				var fileInput = document.getElementsByClassName('file-input')[0];
+
+				var fileName = document.getElementsByClassName('file')[0].getElementsByClassName('file-name')[0];
+
+				var fileChoosePreview = document.getElementById('fileChoosePreview');
+
+				var reader = new FileReader();
+
+				reader.onloadend = function () {
+
+					fileChoosePreview.src = reader.result;
+				}
+
+				fileInput.onchange = function () {
+
+					console.log(this.files[0]);
+
+					var file = this.files[0];
+
+					fileName.innerHTML = file.name;
+
+					if (file) {
+						reader.readAsDataURL(file);
+					} else {
+						fileChoosePreview.src = "";
+					}
+
+					indexrender.sendRequestDetectTrafficSign(file);
+
+				}
+			},
+			sendRequestDetectTrafficSign: function (file) {
+
+				console.log(file);
+				$.ajax(
+					{
+						type: "POST",
+						url: '/testapi',
+						data: {
+							// file: file
+						},
+						success: function (response) {
+
+							console.log(response);
+						}
+					}
+				)
+
+			}
+		};
+	</script>
+	<script>
+		document.addEventListener('DOMContentLoaded', (event) => {
+
+
+			$(".navbar-burger").click(function () {
+
+				// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+				$(".navbar-burger").toggleClass("is-active");
+				$(".navbar-menu").toggleClass("is-active");
+			});
+
+			indexrender.build();
+		});
+	</script>
+</body>
+
+</html>
