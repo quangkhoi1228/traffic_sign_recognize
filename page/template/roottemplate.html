@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đồ án nhận dạng biển báo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar has-shadow is-dark">
+        <div class="navbar-brand">
+            <a class="navbar-item logo">
+                Nhận diện biển báo giao thông
+            </a>
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item ">
+                    <span>Hướng dẫn</span>
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+
+                    <a class="navbar-link">
+                        Thông tin
+                    </a>
+
+                    <div id="moreDropdown" class="navbar-dropdown">
+                        <a class="navbar-item ">
+                            <span>Mục đích đề tài</span>
+                        </a>
+                        <a class="navbar-item " href="/trafficinfomation" target="_blank">
+                            <span>Tra cứu biển báo</span>
+                        </a>
+                        <a class="navbar-item ">
+                            <span>Liên hệ</span>
+                        </a>
+                    </div>
+                </div>
+                <a class="navbar-item " href="https://github.com/quangkhoiuit98/trafficsignrecognize" target="_blank">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>View on Github</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+</html>
