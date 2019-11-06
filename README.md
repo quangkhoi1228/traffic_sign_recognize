@@ -8,8 +8,8 @@
     numpy<br> 
     matplotlib<br> 
     skimage<br>
-    random<br>  
-    tensorflow<br>  
+    random<br>
+    tensorflow<br>
     PIL<br>
     os<br>
 <hr>
