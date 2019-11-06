@@ -1,104 +1,34 @@
 {% extends "template/roottemplate.html" %}
 
 {% block content %}
-<div class="container">
-	<div class="hero">
-		<div class="hero-body ">
-			<div class="columns">
-				<div class="column is-4 is-offset-1">
-					<div class="field">
-						<label class="label">Chọn ảnh</label>
-						<div class="file is-info has-name">
-							<label class="file-label">
-								<input class="file-input" type="file" name="resume">
-								<span class="file-cta">
-									<span class="file-icon">
-										<i class="fas fa-upload"></i>
-									</span>
-									<span class="file-label">
-										Chọn file
-									</span>
-								</span>
-								<span class="file-name">
-									<span class="has-text-white">____________________</span>
-								</span>
-							</label>
-						</div>
-					</div>
-					<div class="field">
-						<img id="fileChoosePreview" src="">
-					</div>
-				</div>
+<div class="columns">
+	<div class="column is-4 is-offset-1">
+		<div class="field">
+			<label class="label">Chọn ảnh</label>
+			<div class="file is-info has-name">
+				<label class="file-label">
+					<input class="file-input" type="file" name="resume">
+					<span class="file-cta">
+						<span class="file-icon">
+							<i class="fas fa-upload"></i>
+						</span>
+						<span class="file-label">
+							Chọn file
+						</span>
+					</span>
+					<span class="file-name">
+						<span class="has-text-white">____________________</span>
+					</span>
+				</label>
 			</div>
+		</div>
+		<div class="field">
+			<img id="fileChoosePreview" src="">
 		</div>
 	</div>
 </div>
 <script>
-
-	var indexrender = {
-		build: function () {
-
-			indexrender.addEventChooseImage();
-		},
-		addEventChooseImage: function () {
-
-			var fileInput = document.getElementsByClassName('file-input')[0];
-
-			var fileName = document.getElementsByClassName('file')[0].getElementsByClassName('file-name')[0];
-
-			var fileChoosePreview = document.getElementById('fileChoosePreview');
-
-			var reader = new FileReader();
-
-			reader.onloadend = function () {
-
-				fileChoosePreview.src = reader.result;
-			}
-
-			fileInput.onchange = function () {
-
-				console.log(this.files[0]);
-
-				var file = this.files[0];
-
-				fileName.innerHTML = file.name;
-
-				if (file) {
-					reader.readAsDataURL(file);
-				} else {
-					fileChoosePreview.src = "";
-				}
-
-				indexrender.sendRequestDetectTrafficSign(file);
-
-			}
-		},
-		sendRequestDetectTrafficSign: function (file) {
-
-			console.log(file);
-			$.ajax({
-				type: "POST",
-				url: 'my-ajax-test/',
-				data: { csrfmiddlewaretoken: '{{ csrf_token }}', text: 'file' },
-				success: function callback(response) {
-					/* do whatever with the response */
-					alert(response);
-				}
-			});
-
-		}
-	};
-</script>
-<script>
 	document.addEventListener('DOMContentLoaded', (event) => {
-
-
-		$(".navbar-burger").click(function () {
-
-			// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-			$(".navbar-burger").toggleClass("is-active");
-			$(".navbar-menu").toggleClass("is-active");
-		});
 
 		indexrender.build();
 	});

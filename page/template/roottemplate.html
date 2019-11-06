@@ -5,16 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Đồ án nhận dạng biển báo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="/static/css/bulma.min.css">
     <link rel="stylesheet" href="/static/css/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="/static/js/jquery.min.js"></script>
+    <script defer src="/static/js/all.js"></script>
+    <script defer src="/static/js/util.js"></script>
+    <script defer src="/static/js/indexrender.js"></script>
+    <script defer src="/static/js/trafficinfomationrender.js"></script>
 </head>
 
 <body>
     <nav class="navbar has-shadow is-dark">
         <div class="navbar-brand">
-            <a class="navbar-item logo">
+            <a class="navbar-item logo" href="/">
                 Nhận diện biển báo giao thông
             </a>
             <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
@@ -54,8 +57,30 @@
             </div>
         </div>
     </nav>
-    {% block content %}
-    {% endblock %}
+    <div class="container">
+        <div class="hero">
+            <div class="hero-body">
+                <div class="columns">
+                    <div class="column is-10 is-offset-1">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+
+            $(".navbar-burger").click(function () {
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+            });
+
+        });
+    </script>
 
 </body>
 

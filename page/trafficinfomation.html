@@ -1,91 +1,15 @@
 {% extends "template/roottemplate.html" %}
 
 {% block content %}
-<div class="container">
-	<div class="hero">
-		<div class="hero-body ">
-			<div class="table-container">
-				<table class="table is-bordered is-striped is-hoverable is-fullwidth">
-					<thead>
-						<tr>
-							<td>Ảnh minh họa</td>
-							<td>Tên biển báo</td>
-							<td>Thông tin thêm</td>
-						</tr>
-					</thead>
-				</table>
-			</div>
-		</div>
-	</div>
+<div class="table-container">
+	<table class="table is-bordered is-striped is-hoverable is-fullwidth">
+		<tbody></tbody>
+	</table>
 </div>
-<script>
-
-	var indexrender = {
-		build: function () {
-
-			indexrender.addEventChooseImage();
-		},
-		addEventChooseImage: function () {
-
-			var fileInput = document.getElementsByClassName('file-input')[0];
-
-			var fileName = document.getElementsByClassName('file')[0].getElementsByClassName('file-name')[0];
-
-			var fileChoosePreview = document.getElementById('fileChoosePreview');
-
-			var reader = new FileReader();
-
-			reader.onloadend = function () {
-
-				fileChoosePreview.src = reader.result;
-			}
-
-			fileInput.onchange = function () {
-
-				console.log(this.files[0]);
-
-				var file = this.files[0];
-
-				fileName.innerHTML = file.name;
-
-				if (file) {
-					reader.readAsDataURL(file);
-				} else {
-					fileChoosePreview.src = "";
-				}
-
-				indexrender.sendRequestDetectTrafficSign(file);
-
-			}
-		},
-		sendRequestDetectTrafficSign: function (file) {
-
-			console.log(file);
-			$.ajax({
-				type: "POST",
-				url: 'my-ajax-test/',
-				data: { csrfmiddlewaretoken: '{{ csrf_token }}', text: 'file' },
-				success: function callback(response) {
-					/* do whatever with the response */
-					alert(response);
-				}
-			});
-
-		}
-	};
-</script>
 <script>
 	document.addEventListener('DOMContentLoaded', (event) => {
 
-
-		$(".navbar-burger").click(function () {
-
-			// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-			$(".navbar-burger").toggleClass("is-active");
-			$(".navbar-menu").toggleClass("is-active");
-		});
-
-		indexrender.build();
+		trafficinfomationrender.build();
 	});
 </script>
 
