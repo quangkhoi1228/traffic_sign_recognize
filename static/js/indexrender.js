@@ -12,19 +12,29 @@ var indexrender = {
 
         var interval = setInterval(function () {
 
-            if (traffictrainidContainer.innerHTML.trim() != '') {
+            if (traffictrainidContainer) {
 
-                var trafficId = traffictrainidContainer.innerHTML.trim();
+                if (traffictrainidContainer.innerHTML.trim() != '') {
 
-                trafficinfomationrender.getTrafficData(function (data) {
+                    var trafficId = traffictrainidContainer.innerHTML.trim();
 
-                    console.log(data);
+                    trafficinfomationrender.getTrafficData(function (data) {
 
-                    console.log(trafficId);
-                })
+                        for (var i = 0; i < data.length; i++) {
 
-                clearInterval(interval);
+                            if (data[i]['trafficid'].includes('-' + trafficId + '-') == true) {
+
+                                shinobi.mapping.render('#trafficResultContainer', JSON.stringify(data[i]));
+
+                            }
+                        }
+
+                    })
+
+                    clearInterval(interval);
+                }
             }
+
         }, 500);
     },
 
@@ -42,6 +52,8 @@ var indexrender = {
         var reader = new FileReader();
 
         fileInput.onchange = function () {
+
+            shinobi.notification.notification.loading();
 
             submitButton.click();
 

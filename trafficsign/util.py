@@ -50,16 +50,12 @@ def imshowgrayx(img, title='BD2L'):
     plt.show()
 
 def cropAndDetectTrafficSign(context):
-    print(context)
     currentPythonFilePath = os.getcwd()
     modelUrl = currentPythonFilePath+'/static/model/model.h5'
     url = currentPythonFilePath + context['url']
 
-    print(url)
     imageType = url.split('.')[1]
     tds_img = 'lastimage.'+imageType
-    print(imageType)
-    print(os.path.isfile(url))
 
     img = imreadx(url, tds_img)
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)

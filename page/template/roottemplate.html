@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="/static/css/bulma.min.css">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/bulma-extensions.min.css">
+    <link rel="stylesheet" href="/static/css/shinobicomponent.css">
+    <script>
+        var shinobi = {};
+    </script>
     <script defer src="/static/js/jquery.min.js"></script>
     <script defer src="/static/js/bulma-extensions.min.js"></script>
     <script defer src="/static/js/all.js"></script>
+    <script defer src="/static/js/notification.js"></script>
+    <script defer src="/static/js/mapping.js"></script>
     <script defer src="/static/js/util.js"></script>
     <script defer src="/static/js/indexrender.js"></script>
     <script defer src="/static/js/trafficinfomationrender.js"></script>
@@ -70,6 +76,25 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div id="confirmPanel" class="modal is-small">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Cảnh báo</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">Bạn chắc chắn?</section>
+            <footer class="modal-card-foot">
+                <button class="button is-success yes">Xác nhận</button>
+                <button class="button cancel">Hủy</button>
+            </footer>
+        </div>
+    </div>
+
+    <div id="shinobinotification" class="notification  shinobinotification">
+        <button class="delete"></button>
+        <div class="notificationcontent">Update success</div>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {

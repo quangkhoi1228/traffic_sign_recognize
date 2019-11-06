@@ -1,0 +1,42 @@
+
+.modal-background {
+	background-color: rgba(0, 0, 0, 0.28);
+}
+
+.modal-card-foot, .modal-card-head {
+	padding: 1rem;
+}
+
+.modal-card-title {
+	font-size: 1.2rem;
+}
+
+.modal-card, .modal-content {
+	width: 20rem;
+}
+
+.shinobinotification {
+	display: none;
+	width: 20rem;
+	position: fixed;
+	z-index: 100;
+	top: 5rem;
+	right: 1rem;
+	box-shadow: 0 2px 4px rgba(15, 14, 14, 0.1), 0 0 0 1px rgba(13, 13, 13, 0.1);
+}
+
+.shinobinotification.infomessage{
+	display: block;
+	background-color: #3465a4;
+	color: white;
+}
+
+.shinobinotification.errormessage{
+	display: block;
+	background-color: #ff3860;
+	color: white;
+}
+
+div.notificationcontent{
+	word-wrap: break-word;
+}
