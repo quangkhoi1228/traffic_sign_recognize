@@ -20,5 +20,9 @@
 
   
 <hr>
-Hỗ trợ các biển báo:
-     101: Đường cấm      102: Cấm đi ngược chiều
+<b>Hỗ trợ các biển báo:<b><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    101: Đường cấm<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    102: Cấm đi ngược chiều<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    122: Dừng lại<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    127: Tốc độ tối đa cho phép<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    133: Hết cấm vượt<br> 
