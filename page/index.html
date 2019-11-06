@@ -3,28 +3,35 @@
 {% block content %}
 <div class="columns">
 	<div class="column is-4 is-offset-1">
-		<div class="field">
-			<label class="label">Chọn ảnh</label>
-			<div class="file is-info has-name">
-				<label class="file-label">
-					<input class="file-input" type="file" name="resume">
-					<span class="file-cta">
-						<span class="file-icon">
-							<i class="fas fa-upload"></i>
+		<form id="formInput" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<div class="field">
+				<label class="label">Chọn ảnh</label>
+				<div class="file is-info has-name">
+					<label class="file-label">
+						<input class="file-input" type="file" name="image">
+						<button class="is-hidden" type="submit">Upload file</button>
+						<span class="file-cta">
+							<span class="file-icon">
+								<i class="fas fa-upload"></i>
+							</span>
+							<span class="file-label">
+								Chọn file
+							</span>
 						</span>
-						<span class="file-label">
-							Chọn file
+						<span class="file-name">
+							<span class="has-text-white">____________________</span>
 						</span>
-					</span>
-					<span class="file-name">
-						<span class="has-text-white">____________________</span>
-					</span>
-				</label>
+					</label>
+				</div>
 			</div>
-		</div>
+		</form>
+		{% if url %}
 		<div class="field">
-			<img id="fileChoosePreview" src="">
+			<img id="fileChoosePreview" src="{{ url }}">
 		</div>
+		{% endif %}
+
 	</div>
 </div>
 <script>

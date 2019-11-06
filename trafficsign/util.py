@@ -1,7 +1,15 @@
-import base64
+from django.shortcuts import render
+from django.http import HttpResponse
+from django.http import JsonResponse
+from django.views.generic import TemplateView
+from django.core.files.storage import FileSystemStorage
 
-def saveBase64Image(imgstring):
-    imgdata = base64.b64decode(imgstring)
-    filename = 'some_image.jpg'  # I assume you have a way of picking unique filenames
-    with open(filename, 'wb') as f:
-        f.write(imgdata)
+
+def uploadFile(request):
+    context = {}
+    if request.method == 'POST':
+        uploaded_file = request.FILES['image']
+        fs = FileSystemStorage()
+        name = fs.save(uploaded_file.name, uploaded_file)
+        context['url'] = fs.url(name)
+    return context

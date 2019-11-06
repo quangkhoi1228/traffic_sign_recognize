@@ -9,30 +9,30 @@ var indexrender = {
 
         var fileName = document.getElementsByClassName('file')[0].getElementsByClassName('file-name')[0];
 
+        var form = document.getElementById('formInput');
+        var submitButton = form.querySelector('[type="submit"]');
+
         var fileChoosePreview = document.getElementById('fileChoosePreview');
 
         var reader = new FileReader();
 
-        reader.onloadend = function () {
-
-            fileChoosePreview.src = reader.result;
-        }
-
         fileInput.onchange = function () {
 
-            console.log(this.files[0]);
+            submitButton.click();
 
-            var file = this.files[0];
+            // console.log(this.files[0]);
 
-            fileName.innerHTML = file.name;
+            // var file = this.files[0];
 
-            if (file) {
-                reader.readAsDataURL(file);
-            } else {
-                fileChoosePreview.src = "";
-            }
+            // fileName.innerHTML = file.name;
 
-            indexrender.sendRequestDetectTrafficSign(file);
+            // if (file) {
+            //     reader.readAsDataURL(file);
+            // } else {
+            //     fileChoosePreview.src = "";
+            // }
+
+            // indexrender.sendRequestDetectTrafficSign(file);
 
         }
     },
