@@ -7,3 +7,9 @@ body{
     text-transform: uppercase;
     font-weight: 200;
 }
+.is-divider-vertical{
+    padding: 0.75rem !important;
+}
+.is-divider-vertical::before{
+    border-left: 1px dashed black !important;
+}

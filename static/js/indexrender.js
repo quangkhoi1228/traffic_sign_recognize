@@ -38,6 +38,11 @@ var indexrender = {
         }, 500);
     },
 
+    thankReport: function(){
+
+        shinobi.notification.notification.info('Cảm ơn đóng góp của bạn');
+    },
+
     addEventChooseImage: function () {
 
         var fileInput = document.getElementsByClassName('file-input')[0];

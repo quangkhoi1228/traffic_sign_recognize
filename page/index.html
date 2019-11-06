@@ -6,7 +6,7 @@
 		<form id="formInput" method="post" enctype="multipart/form-data">
 			{% csrf_token %}
 			<div class="field">
-				<label class="label">Chọn ảnh</label>
+				<label class="label"><span class="title">Chọn ảnh</span></label>
 				<div class="file is-info has-name">
 					<label class="file-label">
 						<input class="file-input" type="file" name="image">
@@ -39,7 +39,7 @@
 	<div class="column">
 		<p id="traffictrainidContainer" class="is-hidden">{{ traffictrainid }}</p>
 		<div class="field">
-			<label class="label">Kết quả</label>
+			<label class="label"><span class="title">Kết quả</span></label>
 		</div>
 		<div class="  notification box is-dark">
 			<article id="trafficResultContainer" class="media">
@@ -57,6 +57,19 @@
 					</div>
 				</div>
 			</article>
+		</div>
+		<div class="field">
+			<label class="label"><span class="subtitle">Góp ý cho ứng dụng</span></label>
+		</div>
+		<div class="buttons">
+			<button onclick="indexrender.thankReport()" class="button is-success"><span class="icon"><i
+						class="fa fa-check"></i></span><span>Kết quả
+					đúng</span></button>
+			<button onclick="indexrender.thankReport()" class="button is-danger"><span class="icon"><i
+						class="fa fa-times"></i></span><span>Kết quả
+					chưa đúng</span></button><a class="button is-light is-dark"
+				href="https://github.com/quangkhoiuit98/trafficsignrecognize" target="_blank"><span class="icon"><i
+						class="fab fa-github"></i></span><span>Star repo Github</span></a>
 		</div>
 	</div>
 	{% endif%}
