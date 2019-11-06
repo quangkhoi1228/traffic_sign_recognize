@@ -1,6 +1,5 @@
 # trafficsignrecognize
-Đồ án nhận diện biển báo
-
+Đồ án nhận diện biển báo cấm đơn trong ảnh môi trường có sử dụng deep learning.<br>
 
 <b>Yêu cầu:</b><br>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;django2<br>
@@ -20,3 +19,6 @@
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>python manage.py runserver</code><br>
 
   
+<hr>
+Hỗ trợ các biển báo:
+     101: Đường cấm      102: Cấm đi ngược chiều
