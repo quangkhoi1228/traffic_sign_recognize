@@ -13,3 +13,6 @@ def uploadFile(request):
         name = fs.save(uploaded_file.name, uploaded_file)
         context['url'] = fs.url(name)
     return context
+
+def detectTrafficSign(request):
+    print(request)

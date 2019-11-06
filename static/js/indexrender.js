@@ -20,17 +20,11 @@ var indexrender = {
 
             submitButton.click();
 
-            // console.log(this.files[0]);
+            console.log(this.files[0]);
 
-            // var file = this.files[0];
+             var file = this.files[0];
 
-            // fileName.innerHTML = file.name;
-
-            // if (file) {
-            //     reader.readAsDataURL(file);
-            // } else {
-            //     fileChoosePreview.src = "";
-            // }
+            fileName.innerHTML = file.name;
 
             // indexrender.sendRequestDetectTrafficSign(file);
 

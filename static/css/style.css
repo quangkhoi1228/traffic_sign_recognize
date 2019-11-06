@@ -1,3 +1,7 @@
+body{
+    min-height: 100vh;
+}
+
 .logo {
     font-size: 1.25rem;
     text-transform: uppercase;

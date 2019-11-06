@@ -14,7 +14,7 @@ def index(request):
     context = {}
     if request.method == 'POST':
         context = util.uploadFile(request)
-        print(context['url'])
+        util.detectTrafficSign(context)
     return render(request, 'index.html', context=context)
 
 
