@@ -14,9 +14,9 @@
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os<br>
 <hr>
 <b>Run project:</b><br>
-<code>cd ospath/django   #goto django root dir</code> <br>
-<code>source bin/activate</code><br>
-<code>cd trafficsignrecognize </code><br>
-<code>python manage.py runserver</code><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>cd ospath/django   #goto django root dir</code> <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>source bin/activate</code><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>cd trafficsignrecognize </code><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>python manage.py runserver</code><br>
 
   
