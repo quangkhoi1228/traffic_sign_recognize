@@ -3,9 +3,9 @@
 
 <b>Yêu cầu:</b><br>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;django2<br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cv2<br> 
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numpy<br> 
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matplotlib<br> 
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cv2<br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numpy<br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matplotlib<br>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;skimage<br>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;random<br>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tensorflow<br>
@@ -18,11 +18,11 @@
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>cd trafficsignrecognize </code><br>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>python manage.py runserver</code><br>
 
-  
+
 <hr>
-<b>Hỗ trợ các biển báo:</b><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    101: Đường cấm<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    102: Cấm đi ngược chiều<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    122: Dừng lại<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    127: Tốc độ tối đa cho phép<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    133: Hết cấm vượt<br> 
+<b>Hỗ trợ các biển báo:</b>(Theo bộ biển báo chuẩn Việt Nam)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;101: Đường cấm<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;102: Cấm đi ngược chiều<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;122: Dừng lại<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;127: Tốc độ tối đa cho phép<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;133: Hết cấm vượt<br>
