@@ -3,7 +3,7 @@
 
 
 <b>Yêu cầu:</b><br>
-    django2<br>
+    &nbsp;&nbsp;django2<br>
     cv2<br> 
     numpy<br> 
     matplotlib<br> 
