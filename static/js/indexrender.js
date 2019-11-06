@@ -2,7 +2,32 @@ var indexrender = {
     build: function () {
 
         indexrender.addEventChooseImage();
+
+        indexrender.addEventRenderResultTraffic();
     },
+
+    addEventRenderResultTraffic: function () {
+
+        var traffictrainidContainer = document.getElementById('traffictrainidContainer');
+
+        var interval = setInterval(function () {
+
+            if (traffictrainidContainer.innerHTML.trim() != '') {
+
+                var trafficId = traffictrainidContainer.innerHTML.trim();
+
+                trafficinfomationrender.getTrafficData(function (data) {
+
+                    console.log(data);
+
+                    console.log(trafficId);
+                })
+
+                clearInterval(interval);
+            }
+        }, 500);
+    },
+
     addEventChooseImage: function () {
 
         var fileInput = document.getElementsByClassName('file-input')[0];
@@ -20,28 +45,10 @@ var indexrender = {
 
             submitButton.click();
 
-            console.log(this.files[0]);
-
-             var file = this.files[0];
+            var file = this.files[0];
 
             fileName.innerHTML = file.name;
 
-            // indexrender.sendRequestDetectTrafficSign(file);
-
         }
     },
-    sendRequestDetectTrafficSign: function (file) {
-
-        console.log(file);
-        $.ajax({
-            type: "POST",
-            url: 'my-ajax-test/',
-            data: { csrfmiddlewaretoken: '{{ csrf_token }}', text: 'file' },
-            success: function callback(response) {
-                /* do whatever with the response */
-                alert(response);
-            }
-        });
-
-    }
 };

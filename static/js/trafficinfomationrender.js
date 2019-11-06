@@ -7,15 +7,11 @@ var trafficinfomationrender = {
 
     renderTable: function () {
 
-        var data = util.xhrAdapter.getResource('/static/json/trafficinfomation.json', function (response) {
+        trafficinfomationrender.getTrafficData(function (data) {
 
             var table = document.getElementsByClassName('table')[0];
 
             var tbody = table.getElementsByTagName('tbody')[0];
-
-            var data = JSON.parse(response);
-
-            console.log(data);
 
             for (var i = 0; i < data.length; i++) {
 
@@ -31,10 +27,21 @@ var trafficinfomationrender = {
                 descriptionContainer.innerHTML = '<strong>' + data[i].name + '</strong> ' + data[i].description;
 
             }
+
         })
 
+    },
+    getTrafficData: function (callback) {
 
+        var data = util.xhrAdapter.getResource('/static/json/trafficinfomation.json', function (response) {
 
+            var data = JSON.parse(response);
 
+            if (typeof callback == 'function') {
+
+                callback(data);
+
+            }
+        })
     }
 }

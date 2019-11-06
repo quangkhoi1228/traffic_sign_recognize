@@ -8,10 +8,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('trafficinfomation/', views.trafficinfomation, name='trafficinfomation'),
     path('upload/', views.upload, name='upload'),
-    path('testapi/', views.detectTrafficSign, name='detecttrafficsign'),
     path('admin/', admin.site.urls),
-    path('my-ajax-test/', views.testcall),
-
 ]
 
 if settings.DEBUG:
