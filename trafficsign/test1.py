@@ -69,7 +69,7 @@ for cnt in cnts:
 crop = img[b:b+d, a:a+c]
 # imshowx(crop,'Crop')
 
-model = load_model('/Users/2apple_mjlq2/Desktop/doan_detect/model/model.h5')
+model = load_model('/static/model/model.h5')
 data = []
 image_from_array = Image.fromarray(crop, 'RGB')
 crop = image_from_array.resize((30, 30))
