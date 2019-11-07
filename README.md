@@ -44,11 +44,12 @@ Chạy server
 <h2>Chức năng chính</h2>
 <b>Trang chủ</b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhận diện biển báo từ ảnh môi trường<br>
-
+<br>
 <img src="https://github.com/quangkhoiuit98/trafficsignrecognize/blob/master/static/image/index1.png"><br>
+<br><br>
 <img src="https://github.com/quangkhoiuit98/trafficsignrecognize/blob/master/static/image/index2.png"><br>
 
 <b>Trang tra cứu biển báo</b><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tra cứu biển báo từ dữ liệu của ứng dụng<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tra cứu biển báo từ dữ liệu của ứng dụng<br><br>
 
-<img src="https://github.com/quangkhoiuit98/trafficsignrecognize/blob/master/static/image/trafficinfomation.png"><br>
+<img src="https://github.com/quangkhoiuit98/trafficsignrecognize/blob/master/static/image/trafficinfomation.png"><br><br>
