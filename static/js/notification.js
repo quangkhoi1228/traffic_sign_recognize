@@ -92,7 +92,7 @@ shinobi.notification = {
 
 			var notificationcontent = notification
 					.getElementsByClassName("notificationcontent")[0];
-			notificationcontent.innerHTML = '<div class="columns is-vcentered"> <a class="button is-text  is-loading column is-1"></a> <div class="column">Đang xử lý</div> </div>';
+			notificationcontent.innerHTML = '<div class="columns is-vcentered"> <a class="button is-text  is-loading"></a> <div class="">Đang xử lý</div> </div>';
 
 		},
 		'loaded' : function() {
