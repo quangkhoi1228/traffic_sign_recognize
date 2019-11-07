@@ -1,14 +1,56 @@
 {% extends "template/roottemplate.html" %}
 
 {% block content %}
-<div class="table-container">
-	<table class="table is-bordered is-striped is-hoverable is-fullwidth">
-		<tbody></tbody>
-	</table>
+<div class="columns">
+	<div class="column">
+		<p class="title">Liên hệ</p>
+		<div class="content contact-content">
+			<p> <span class="icon is-medium"><i class="fab fa-2x fa-facebook"></i></span> <span><a
+						href="https://www.facebook.com/khoi281298" target="_blank">facebook.com/khoi281298</a></span>
+			</p>
+			<p> <span class="icon is-medium"><i class="fab fa-2x fa-skype"></i></span> <span><a
+						href="https://join.skype.com/invite/RCNFilpvVBth"
+						target="_blank">Skype:quangkhoiuit98</a></span>
+			</p>
+			<p> <span class="icon is-medium"><i class="fab fa-2x fa-google"></i></span> <span><a
+						href="mailto:quangkhoiuit98@gmail.com?Subject=Phản hồi project nhận diện biển báo giao thông"
+						target="_top">Email:quangkhoiuit98@gmail.com</a></span>
+			</p>
+		</div>
+		<p class="content">Mọi sự đóng góp, góp ý của bạn đều là những viên trân châu quý báu để chúng tôi ngày càng
+			hoàn thiện sản phẩm của mình hơn. <br>Cảm ơn các bạn rất nhiều.</p>
+	</div>
+	<div class="is-divider-vertical "></div>
+	<div id="sendMessageFormContainer" class="column">
+		<div class="field">
+			<label class="label">Tên</label>
+			<div class="control">
+				<input class="input" snb-key="name" type="text" placeholder="Tên">
+			</div>
+		</div>
+		<div class="field">
+			<label class="label">Email</label>
+			<div class="control">
+				<input class="input" snb-key="email" type="email" placeholder="Email">
+			</div>
+		</div>
+		<div class="field">
+			<label class="label">Lời nhắn</label>
+			<div class="control">
+				<textarea class="textarea" snb-key="message" placeholder="Lời nhắn"></textarea>
+			</div>
+		</div>
+		<div class="field">
+			<div class="control">
+				<button class="button is-link">Gửi lời nhắn</button>
+			</div>
+		</div>
+	</div>
 </div>
 <script>
 	document.addEventListener('DOMContentLoaded', (event) => {
 
+		contactrender.build();
 	});
 </script>
 

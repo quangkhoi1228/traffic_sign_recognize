@@ -29,3 +29,24 @@ body{
 .has-result .show-when-has-result{
     display: block;
 }
+
+.column{
+    padding: 1.5rem;
+}
+
+.fa-facebook{
+    color: #4267b2;
+}
+
+.fa-skype{
+    color: #00aff0;
+}
+
+.fa-google{
+    color: #ea4335;
+}
+
+.contact-content  a{
+    position: relative;
+    top: -0.65rem;
+}
