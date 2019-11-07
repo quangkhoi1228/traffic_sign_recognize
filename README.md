@@ -1,13 +1,17 @@
 # trafficsignrecognize
 Đồ án nhận diện biển báo cấm đơn trong ảnh môi trường có sử dụng deep learning.<br>
 
-<b>Yêu cầu:</b><br>
+<h4>Yêu cầu:</h4><br>
+<b>Python:</b><br>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python 3.6.9<br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;django 2.0.3<br>
+<br>
+<b>Packages:</b><br>
+<i>*Nên sử dụng Anaconda 3 để cài tất cả package</i><br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;django 2.2.5<br>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cv2 (opencv) 3.4.2<br>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numpy 1.17.2<br>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matplotlib 3.1.1<br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;skimage (sciket-image) 0.15.0<br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;skimage (scikit-image) 0.15.0<br>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;random<br>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tensorflow 2.0.0<br>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keras 2.2.4<br>

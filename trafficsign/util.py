@@ -12,6 +12,7 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 import os
 
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 def uploadFile(request):
     context = {}
