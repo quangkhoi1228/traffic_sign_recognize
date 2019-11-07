@@ -52,7 +52,8 @@ def imshowgrayx(img, title='BD2L'):
 
 def cropAndDetectTrafficSign(context):
     currentPythonFilePath = os.getcwd()
-    modelUrl = currentPythonFilePath+'/static/model/model.h5'
+    # modelUrl = currentPythonFilePath+'/static/model/model.h5'
+    modelUrl = currentPythonFilePath+'/static/model/new_model.h5'
     url = currentPythonFilePath + context['url']
 
     imageType = url.split('.')[1]

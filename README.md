@@ -37,7 +37,6 @@ Chạy server
      <li>102: Cấm đi ngược chiều</li>
      <li>122: Dừng lại</li>
      <li>127: Tốc độ tối đa cho phép</li>
-     <li>133: Hết cấm vượt</li>
 </ul>
 <br>
 <br>

@@ -21,6 +21,14 @@ def trafficinfomation(request):
     context = {}
     return render(request, 'trafficinfomation.html', context=context)
 
+def contact(request):
+    context = {}
+    return render(request, 'contact.html', context=context)
+
+def guide(request):
+    context = {}
+    return render(request, 'guide.html', context=context)
+
 
 def upload(request):
     context = util.uploadFile(request)
