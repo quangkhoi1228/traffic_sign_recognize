@@ -3,21 +3,24 @@
 
 <h2>Yêu cầu:</h2>
 <b>Python:</b><br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python 3.6.9<br>
+<ul>
+     <li>python 3.6.9</li>
+</ul>
 <br>
 <b>Packages:</b><br>
 <i>*Khuyến khích sử dụng Anaconda 3 để cài tất cả packages</i><br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;django 2.2.5<br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cv2 (opencv) 3.4.2<br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numpy 1.17.2<br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matplotlib 3.1.1<br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;skimage (scikit-image) 0.15.0<br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;random<br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tensorflow 2.0.0<br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keras 2.2.4<br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PIL (Image)<br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os<br>
-
+<ul>
+     <li>django 2.2.5</li>
+     <li>cv2 (opencv) 3.4.2</li>
+     <li>numpy 1.17.2</li>
+     <li>matplotlib 3.1.1</li>
+     <li>skimage (scikit-image) 0.15.0</li>
+     <li>random</li>
+     <li>tensorflow 2.0.0</li>
+     <li>keras 2.2.4</li>
+     <li>PIL (Image)</li>
+     <li>os</li>
+</ul>
 <h2>Run project:</h2>
 Activate biến môi trường Anaconda 3
 <pre>source ospath/anaconda3/anaconda3/bin/activate</pre> 
@@ -29,12 +32,13 @@ Chạy server
 <pre>python manage.py runserver</pre><br>
 <hr>
 <b>Hỗ trợ các biển báo:</b> (Theo bộ biển báo chuẩn Việt Nam)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;101: Đường cấm<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;102: Cấm đi ngược chiều<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;122: Dừng lại<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;127: Tốc độ tối đa cho phép<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;133: Hết cấm vượt<br>
-
+<ul>
+     <li>101: Đường cấm</li>
+     <li>102: Cấm đi ngược chiều</li>
+     <li>122: Dừng lại</li>
+     <li>127: Tốc độ tối đa cho phép</li>
+     <li>133: Hết cấm vượt</li>
+</ul>
 <br>
 <br>
 <h2>Chức năng chính</h2>
