@@ -36,40 +36,45 @@
 	</div>
 	{% if traffictrainid %}
 	<div class="is-divider-vertical "></div>
-	<div class="column">
+	<div id="resultColumn" class="column has-result">
 		<p id="traffictrainidContainer" class="is-hidden">{{ traffictrainid }}</p>
 		<div class="field">
 			<label class="label"><span class="title">Kết quả</span></label>
 		</div>
-		<div class="  notification box is-dark">
-			<article id="trafficResultContainer" class="media">
-				<figure class="media-left">
-					<p class="image is-64x64 ">
-						<img class="is-rounded" snb-key="image" snb-key-src="image">
-					</p>
-				</figure>
-				<div class="media-content">
-					<div class="content">
-						<p>
-							<strong snb-key="name"></strong>
-							<span snb-key="description"></span>
+		<div class="show-when-has-result">
+			<div class=" notification box is-dark">
+				<article id="trafficResultContainer" class="media">
+					<figure class="media-left">
+						<p class="image is-64x64 ">
+							<img class="is-rounded" snb-key="image" snb-key-src="image">
 						</p>
+					</figure>
+					<div class="media-content">
+						<div class="content">
+							<p>
+								<strong snb-key="name"></strong>
+								<span snb-key="description"></span>
+							</p>
+						</div>
 					</div>
-				</div>
-			</article>
+				</article>
+			</div>
+			<div class="field">
+				<label class="label"><span class="subtitle">Góp ý cho ứng dụng</span></label>
+			</div>
+			<div class="buttons">
+				<button onclick="indexrender.thankReport()" class="button is-success"><span class="icon"><i
+							class="fa fa-check"></i></span><span>Kết quả
+						đúng</span></button>
+				<button onclick="indexrender.thankReport()" class="button is-danger"><span class="icon"><i
+							class="fa fa-times"></i></span><span>Kết quả
+						chưa đúng</span></button><a class="button is-light is-dark"
+					href="https://github.com/quangkhoiuit98/trafficsignrecognize" target="_blank"><span class="icon"><i
+							class="fab fa-github"></i></span><span>Star repo Github</span></a>
+			</div>
 		</div>
-		<div class="field">
-			<label class="label"><span class="subtitle">Góp ý cho ứng dụng</span></label>
-		</div>
-		<div class="buttons">
-			<button onclick="indexrender.thankReport()" class="button is-success"><span class="icon"><i
-						class="fa fa-check"></i></span><span>Kết quả
-					đúng</span></button>
-			<button onclick="indexrender.thankReport()" class="button is-danger"><span class="icon"><i
-						class="fa fa-times"></i></span><span>Kết quả
-					chưa đúng</span></button><a class="button is-light is-dark"
-				href="https://github.com/quangkhoiuit98/trafficsignrecognize" target="_blank"><span class="icon"><i
-						class="fab fa-github"></i></span><span>Star repo Github</span></a>
+		<div class="hidden-when-has-result notification">Biển báo chưa hỗ trợ hoặc không tìm thấy biển báo trong hình.
+			Xem thêm thông tin biển báo <a class="has-text-link" href="/trafficinfomation" target="_blank">tại đây</a>
 		</div>
 	</div>
 	{% endif%}

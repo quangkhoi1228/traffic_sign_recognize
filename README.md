@@ -6,7 +6,7 @@
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python 3.6.9<br>
 <br>
 <b>Packages:</b><br>
-<i>*Nên sử dụng Anaconda 3 để cài tất cả package</i><br>
+<i>*Nên sử dụng Anaconda 3 để cài tất cả packages</i><br>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;django 2.2.5<br>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cv2 (opencv) 3.4.2<br>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numpy 1.17.2<br>
@@ -32,3 +32,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;122: Dừng lại<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;127: Tốc độ tối đa cho phép<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;133: Hết cấm vượt<br>
+
+<br>
+<br>
+<h2>Chức năng chính</h2>
+<b>Trang chủ</b>
+<img src="">

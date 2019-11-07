@@ -10,6 +10,9 @@ var indexrender = {
 
         var traffictrainidContainer = document.getElementById('traffictrainidContainer');
 
+        var resultContainer = traffictrainidContainer.parentElement;
+
+
         var interval = setInterval(function () {
 
             if (traffictrainidContainer) {
@@ -20,13 +23,24 @@ var indexrender = {
 
                     trafficinfomationrender.getTrafficData(function (data) {
 
+                        var isHasDataSupport = false;
+                        var resultColumn = document.getElementById('resultColumn');
+
+
                         for (var i = 0; i < data.length; i++) {
 
                             if (data[i]['trafficid'].includes('-' + trafficId + '-') == true) {
 
                                 shinobi.mapping.render('#trafficResultContainer', JSON.stringify(data[i]));
 
+                                isHasDataSupport = true;
                             }
+                        }
+
+                        if (isHasDataSupport == false) {
+                            resultColumn.classList.remove('has-result');
+                        }else{
+                            resultColumn.classList.add('has-result');
                         }
 
                     })
@@ -38,7 +52,7 @@ var indexrender = {
         }, 500);
     },
 
-    thankReport: function(){
+    thankReport: function () {
 
         shinobi.notification.notification.info('Cảm ơn đóng góp của bạn');
     },

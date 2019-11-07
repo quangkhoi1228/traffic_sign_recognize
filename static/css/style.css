@@ -13,3 +13,19 @@ body{
 .is-divider-vertical::before{
     border-left: 1px dashed black !important;
 }
+.show-when-has-result{
+
+    display: none
+}
+.hidden-when-has-result{
+
+    display: block;
+}
+
+.has-result .hidden-when-has-result{
+    display: none;
+}
+
+.has-result .show-when-has-result{
+    display: block;
+}
