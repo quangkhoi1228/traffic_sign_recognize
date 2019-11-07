@@ -19,12 +19,14 @@
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os<br>
 
 <h2>Run project:</h2>
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>source ospath/anaconda3/anaconda3/bin/activate</code> 
- <i>#Thư mục chứa Anaconda 3</i><br>
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>conda activate opencv</code> 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<pre>source ospath/anaconda3/anaconda3/bin/activate   
+ <i>#Thư mục chứa Anaconda 3<i></pre> 
+<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<pre>conda activate opencv</pre> 
   <i>#Kích hoạt môi trường chứa các packages</i><br>
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>cd parentProjectPath/trafficsignrecognize </code><br>
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>python manage.py runserver</code><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<pre>cd parentProjectPath/trafficsignrecognize </pre><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<pre>python manage.py runserver</pre><br>
 <hr>
 <b>Hỗ trợ các biển báo:</b> (Theo bộ biển báo chuẩn Việt Nam)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;101: Đường cấm<br>
