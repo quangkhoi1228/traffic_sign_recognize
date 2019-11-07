@@ -36,5 +36,13 @@
 <br>
 <br>
 <h2>Chức năng chính</h2>
-<b>Trang chủ</b>
-<img src="https://github.com/quangkhoiuit98/trafficsignrecognize/blob/master/static/image/index1.png">
+<b>Trang chủ</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhận diện biển báo từ ảnh môi trường<br>
+
+<img src="https://github.com/quangkhoiuit98/trafficsignrecognize/blob/master/static/image/index1.png"><br>
+<img src="https://github.com/quangkhoiuit98/trafficsignrecognize/blob/master/static/image/index2.png"><br>
+
+<b>Trang tra cứu biển báo</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tra cứu biển báo từ dữ liệu của ứng dụng<br>
+
+<img src="https://github.com/quangkhoiuit98/trafficsignrecognize/blob/master/static/image/trafficinfomation.png"><br>
