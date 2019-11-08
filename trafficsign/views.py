@@ -12,9 +12,9 @@ from . import util
 
 def index(request):
     context = {}
-    context['title'] = 'Trang chủ'
     if request.method == 'POST':
         context = util.detectTrafficSign(request)
+    context['title'] = 'Trang chủ'
     return render(request, 'index.html', context=context)
 
 
