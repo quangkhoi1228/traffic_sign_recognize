@@ -1,14 +1,43 @@
 {% extends "template/roottemplate.html" %}
 
 {% block content %}
-<div class="table-container">
-	<table class="table is-bordered is-striped is-hoverable is-fullwidth">
-		<tbody></tbody>
-	</table>
+<div id="guideTabs" class="tabs is-boxed">
+	<ul>
+		<li class="is-active" guide="index">
+			<a>
+				<span>Trang chủ</span>
+			</a>
+		</li>
+		<li guide="trafficinfomation">
+			<a>
+				<span>Tra cứu biển báo</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div guide-content="index" class="content ">
+	<p>Bước 1: Nhấn nút chọn ảnh</p>
+	<figure class="">
+		<img class="object-fit-cover" src="/static/image/indexguide1.png" alt="">
+	</figure>
+	<p>Bước 2: Chọn ảnh</p>
+	<figure class="">
+		<img class="object-fit-cover" src="/static/image/indexguide2.png" alt="">
+	</figure>
+	<p>Bước 3: Xem kết quả</p>
+	<figure class="">
+		<img class="object-fit-cover" src="/static/image/indexguide3.png" alt="">
+	</figure>
+</div>
+<div guide-content="trafficinfomation" class="content is-hidden">
+	<figure class="">
+		<img class="object-fit-cover" src="/static/image/trafficinfomation.png" alt="">
+	</figure>
 </div>
 <script>
 	document.addEventListener('DOMContentLoaded', (event) => {
 
+		guiderender.build();
 	});
 </script>
 

@@ -50,3 +50,13 @@ body{
     position: relative;
     top: -0.65rem;
 }
+
+.object-fit-cover{
+    object-fit: cover;
+}
+
+.hero .tabs ul{
+    border-bottom-color: #dbdbdb;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
