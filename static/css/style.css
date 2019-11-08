@@ -7,6 +7,15 @@ body{
     top: 0;
 }
 
+[data-badge].has-badge-inline::after {
+    top: 1rem !important;
+    right: -1.25rem !important;
+    background: transparent;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    line-height: 1.5;
+}
+
 .navbar-item img {
     max-height: 2.5rem;
 }
