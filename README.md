@@ -39,7 +39,7 @@ Sau khi chạy server thành công truy cập địa chỉ <a href="http://local
      <li>122: Dừng lại</li>
      <li>127: Tốc độ tối đa cho phép</li>
 </ul>
-Tham khảo source code train file model <a href="https://github.com/quangkhoiuit98/trainmodeltrafficsignrecognize">tại đây </a>
+Tham khảo source code train file model.h5 tại <a href="https://github.com/quangkhoiuit98/trainmodeltrafficsignrecognize">github.com/quangkhoiuit98/trainmodeltrafficsignrecognize</a>
 <br>
 <br>
 <h2>Chức năng chính</h2>
