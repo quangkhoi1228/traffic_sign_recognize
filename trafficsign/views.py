@@ -12,6 +12,7 @@ from . import util
 
 def index(request):
     context = {}
+    context['title'] = 'Trang chủ'
     if request.method == 'POST':
         context = util.detectTrafficSign(request)
     return render(request, 'index.html', context=context)
@@ -19,17 +20,21 @@ def index(request):
 
 def trafficinfomation(request):
     context = {}
+    context['title'] = 'Tra cứu biển báo'
     return render(request, 'trafficinfomation.html', context=context)
 
 def contact(request):
     context = {}
+    context['title'] = 'Liên hệ'
     return render(request, 'contact.html', context=context)
 
 def guide(request):
     context = {}
+    context['title'] = 'Hướng dẫn'
     return render(request, 'guide.html', context=context)
 
 
 def upload(request):
     context = util.uploadFile(request)
+    context['title'] = 'Upload file'
     return render(request, 'upload.html', context)

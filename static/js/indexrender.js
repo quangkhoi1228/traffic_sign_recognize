@@ -10,46 +10,50 @@ var indexrender = {
 
         var traffictrainidContainer = document.getElementById('traffictrainidContainer');
 
-        var resultContainer = traffictrainidContainer.parentElement;
+        if (traffictrainidContainer) {
+
+            var resultContainer = traffictrainidContainer.parentElement;
 
 
-        var interval = setInterval(function () {
+            var interval = setInterval(function () {
 
-            if (traffictrainidContainer) {
+                if (traffictrainidContainer) {
 
-                if (traffictrainidContainer.innerHTML.trim() != '') {
+                    if (traffictrainidContainer.innerHTML.trim() != '') {
 
-                    var trafficId = traffictrainidContainer.innerHTML.trim();
+                        var trafficId = traffictrainidContainer.innerHTML.trim();
 
-                    trafficinfomationrender.getTrafficData(function (data) {
+                        trafficinfomationrender.getTrafficData(function (data) {
 
-                        var isHasDataSupport = false;
-                        var resultColumn = document.getElementById('resultColumn');
+                            var isHasDataSupport = false;
+                            var resultColumn = document.getElementById('resultColumn');
 
 
-                        for (var i = 0; i < data.length; i++) {
+                            for (var i = 0; i < data.length; i++) {
 
-                            if (data[i]['trafficid'].includes('-' + trafficId + '-') == true) {
+                                if (data[i]['trafficid'].includes('-' + trafficId + '-') == true) {
 
-                                shinobi.mapping.render('#trafficResultContainer', JSON.stringify(data[i]));
+                                    shinobi.mapping.render('#trafficResultContainer', JSON.stringify(data[i]));
 
-                                isHasDataSupport = true;
+                                    isHasDataSupport = true;
+                                }
                             }
-                        }
 
-                        if (isHasDataSupport == false) {
-                            resultColumn.classList.remove('has-result');
-                        }else{
-                            resultColumn.classList.add('has-result');
-                        }
+                            if (isHasDataSupport == false) {
+                                resultColumn.classList.remove('has-result');
+                            } else {
+                                resultColumn.classList.add('has-result');
+                            }
 
-                    })
+                        })
 
-                    clearInterval(interval);
+                        clearInterval(interval);
+                    }
                 }
-            }
 
-        }, 500);
+            }, 500);
+        }
+
     },
 
     thankReport: function () {

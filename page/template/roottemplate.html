@@ -4,7 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Đồ án nhận dạng biển báo</title>
+    <title>
+        {% block title %}
+        {{ title }}
+        {% endblock %}
+    </title>
+
+    <link rel="icon" type="image/png" href="/static/image/favicon.png">
     <link rel="stylesheet" href="/static/css/bulma.min.css">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/bulma-extensions.min.css">
@@ -29,8 +35,8 @@
 <body class="has-background-light">
     <nav class="navbar has-shadow is-dark">
         <div class="navbar-brand">
-            <a class="navbar-item logo" href="/">
-                Nhận diện biển báo giao thông
+            <a class="navbar-item" href="/">
+                <img class="object-fit-cover" src="/static/image/icon.png">
             </a>
             <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
                 <span></span>
