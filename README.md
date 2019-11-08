@@ -30,7 +30,7 @@ Di chuyển đến thư mục chứa project
 <pre>cd parentProjectPath/trafficsignrecognize </pre>
 Chạy server
 <pre>python manage.py runserver</pre><br>
-Sau khi chạy server thành công truy cập địa chỉ <a href="http://localhost:8000" target="_blank">localhost:8000</a> để thao tác.
+Sau khi chạy server thành công truy cập địa chỉ <a href="http://localhost:8000/" target="_blank">localhost:8000</a> để thao tác.
 <hr>
 <b>Hỗ trợ các biển báo:</b> (Theo bộ biển báo chuẩn Việt Nam)<br>
 <ul>
