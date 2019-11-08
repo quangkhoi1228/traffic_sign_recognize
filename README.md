@@ -23,13 +23,14 @@
 </ul>
 <h2>Run project:</h2>
 Activate biến môi trường Anaconda 3
-<pre>source ospath/anaconda3/anaconda3/bin/activate</pre> 
+<pre>source ospath/anaconda3/anaconda3/bin/activate</pre>
 Activate môi trường chứa các packages cần thiết
-<pre>conda activate opencv</pre> 
+<pre>conda activate opencv</pre>
 Di chuyển đến thư mục chứa project
 <pre>cd parentProjectPath/trafficsignrecognize </pre>
 Chạy server
 <pre>python manage.py runserver</pre><br>
+Sau khi chạy server thành công truy cập địa chỉ <a href="http://localhost:8000" target="_blank">localhost:8000</a> để thao tác.
 <hr>
 <b>Hỗ trợ các biển báo:</b> (Theo bộ biển báo chuẩn Việt Nam)<br>
 <ul>
