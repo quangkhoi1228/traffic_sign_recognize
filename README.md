@@ -18,7 +18,7 @@
      <li>random</li>
      <li>tensorflow 2.0.0</li>
      <li>keras 2.2.4</li>
-     <li>PIL (Image)</li>
+     <li>PIL (pillow)</li>
      <li>os</li>
 </ul>
 <h2>Run project:</h2>
