@@ -17,10 +17,9 @@
      <li>numpy 1.17.2</li>
      <li>matplotlib 3.1.1</li>
      <li>scikit-image 0.15.0</li>
-     <li>random</li>
      <li>tensorflow 2.0.0</li>
      <li>keras 2.2.4</li>
-     <li>pillow</li>
+     <li>pillow 6.2.1</li>
 </ul>
 <h2>Run project:</h2>
 Activate biến môi trường Anaconda 3
