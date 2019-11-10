@@ -13,15 +13,14 @@
 <img src="https://github.com/quangkhoiuit98/trafficsignrecognize/blob/master/static/image/indexguide0.png">
 <ul>
      <li>django 2.2.5</li>
-     <li>cv2 (opencv) 3.4.2</li>
+     <li>opencv 3.4.2</li>
      <li>numpy 1.17.2</li>
      <li>matplotlib 3.1.1</li>
-     <li>skimage (scikit-image) 0.15.0</li>
+     <li>scikit-image 0.15.0</li>
      <li>random</li>
      <li>tensorflow 2.0.0</li>
      <li>keras 2.2.4</li>
-     <li>PIL (pillow)</li>
-     <li>os</li>
+     <li>pillow</li>
 </ul>
 <h2>Run project:</h2>
 Activate biến môi trường Anaconda 3
