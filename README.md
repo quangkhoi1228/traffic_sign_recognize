@@ -10,8 +10,7 @@
 <b>Packages:</b><br>
 <i>*Khuyến khích sử dụng Anaconda 3 tạo một environment mới tên "opencv" để cài tất cả packages như hình</i><br>
 <br>
-<img src="https://github.com/quangkhoiuit98/trafficsignrecognize/blob/master/static/image/indexguide0.png"><br>
-<br><
+<img src="https://github.com/quangkhoiuit98/trafficsignrecognize/blob/master/static/image/indexguide0.png">
 <ul>
      <li>django 2.2.5</li>
      <li>cv2 (opencv) 3.4.2</li>
