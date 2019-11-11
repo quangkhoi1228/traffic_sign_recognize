@@ -82,21 +82,51 @@ var indexrender = {
 
         var listImage = detailSection.getElementsByTagName('img');
 
+        var currentDate = new Date();
+        var milisecond = currentDate.getTime();
+
+
         for (var i = 0; i < listImage.length; i++) {
 
             var currentImageUrl = listImage[i].getAttribute('src');
 
             var currentImageType = indexrender.getImageType(currentImageUrl);
 
-            var currentDate = new Date();
-            var milisecond = currentDate.getTime();
-
             var newImageUrl = currentImageUrl.replace(currentImageType, newImageType) + '?' + milisecond;
 
             listImage[i].setAttribute('src', newImageUrl);
+
+            indexrender.checkImage(listImage[i], currentImageUrl.replace(currentImageType, newImageType));
+
         }
 
         detailSection.classList.toggle('is-hidden');
+
+
+    },
+
+    checkImage: function (item, url) {
+
+        var http = new XMLHttpRequest();
+
+        http.open('HEAD', url, false);
+        http.send();
+        var label = item.parentElement.getElementsByClassName('label')[0];
+
+        if (url.includes('/static/image/cropimage')) {
+
+            if (http.status == 404) {
+
+                label.innerHTML = 'Không thể crop được biển báo';
+
+                item.classList.add('is-hidden');
+            } else {
+                label.innerHTML = 'Crop';
+
+                item.classList.remove('is-hidden');
+            }
+        }
+
     },
 
     addEventChooseImage: function () {

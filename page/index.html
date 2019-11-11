@@ -234,8 +234,9 @@ os<span style='color:#808030; '>.</span>environ<span style='color:#808030; '>[</
 			cv2<span style='color:#808030; '>.</span>imwrite<span style='color:#808030; '>(</span>saveDetectImageUrl <span style='color:#44aadd; '>+</span> <span style='color:#0000e6; '>'cropimage.'</span><span style='color:#44aadd; '>+</span>imageType<span style='color:#808030; '>,</span> img2<span style='color:#808030; '>)</span>
 
 		<span style='color:#800000; font-weight:bold; '>except</span><span style='color:#808030; '>:</span>
-			<span style='color:#800000; font-weight:bold; '>print</span><span style='color:#808030; '>(</span><span style='color:#0000e6; '>"cannot border box"</span><span style='color:#808030; '>)</span>
-			crop <span style='color:#808030; '>=</span> img
+			<span style='color:#200080; font-weight:bold; '>print</span><span style='color:#308080; '>(</span><span style='color:#1060b6; '>"cannot border box"</span><span style='color:#308080; '>)</span>
+			os<span style='color:#308080; '>.</span>remove<span style='color:#308080; '>(</span>saveDetectImageUrl <span style='color:#44aadd; '>+</span> <span style='color:#1060b6; '>'cropimage.'</span><span style='color:#44aadd; '>+</span>imageType<span style='color:#308080; '>)</span>
+			crop <span style='color:#308080; '>=</span> img
 		model <span style='color:#808030; '>=</span> load_model<span style='color:#808030; '>(</span>modelUrl<span style='color:#808030; '>)</span>
 		data <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#808030; '>]</span>
 		image_from_array <span style='color:#808030; '>=</span> Image<span style='color:#808030; '>.</span>fromarray<span style='color:#808030; '>(</span>crop<span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'RGB'</span><span style='color:#808030; '>)</span>

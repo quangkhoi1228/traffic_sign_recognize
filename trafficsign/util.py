@@ -84,8 +84,9 @@ def cropAndDetectTrafficSign(context):
         itmp, cnts, hierarchy = cv2.findContours(
             edge_img.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         cv2.drawContours(img2, cnts, -1, (0, 255, 0), 2)
-        
-        cv2.imwrite(saveDetectImageUrl + 'contournorestriction.'+imageType, img2)
+
+        cv2.imwrite(saveDetectImageUrl +
+                    'contournorestriction.'+imageType, img2)
 
         img2 = img.copy()
         try:
@@ -98,14 +99,16 @@ def cropAndDetectTrafficSign(context):
                 x, y, w, h = cv2.boundingRect(cnt)
                 a, b, c, d = x, y, w, h
                 cv2.rectangle(img2, (x, y), (x+w, y+h), (0, 255, 0), 3)
-            
-            cv2.imwrite(saveDetectImageUrl + 'contourrestrictedforlargeregion.'+imageType, img2)
+
+            cv2.imwrite(saveDetectImageUrl +
+                        'contourrestrictedforlargeregion.'+imageType, img2)
 
             crop = img[b:b+d, a:a+c]
             cv2.imwrite(saveDetectImageUrl + 'cropimage.'+imageType, crop)
 
         except:
             print("cannot border box")
+            os.remove(saveDetectImageUrl + 'cropimage.'+imageType)
             crop = img
         model = load_model(modelUrl)
         data = []
