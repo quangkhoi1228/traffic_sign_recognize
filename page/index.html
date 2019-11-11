@@ -243,7 +243,6 @@ os<span style="color: #333333">.</span>environ[<span style="background-color: #f
             X_test <span style="color: #333333">=</span> np<span style="color: #333333">.</span>array(data)
             X_test <span style="color: #333333">=</span> X_test<span style="color: #333333">.</span>astype(<span style="background-color: #fff0f0">&#39;float32&#39;</span>)<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">255</span>
             prediction <span style="color: #333333">=</span> model<span style="color: #333333">.</span>predict_classes(X_test)
-            cv2<span style="color: #333333">.</span>imwrite(saveDetectImageUrl <span style="color: #333333">+</span> <span style="background-color: #fff0f0">&#39;detailcropimage.&#39;</span><span style="color: #333333">+</span>imageType, crop)
 
             <span style="color: #008800; font-weight: bold">return</span> prediction
 
