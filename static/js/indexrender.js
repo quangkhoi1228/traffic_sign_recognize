@@ -61,6 +61,44 @@ var indexrender = {
         shinobi.notification.notification.info('Cảm ơn đóng góp của bạn');
     },
 
+    getImageType: function (string) {
+
+        var imageUrlSplit = string.split('.');
+
+        var imageType = imageUrlSplit[imageUrlSplit.length - 1];
+
+        return imageType
+    },
+
+    showDetail: function () {
+
+        var detailSection = document.getElementById('detailSection');
+
+        var fileChoosePreview = document.getElementById('fileChoosePreview');
+
+        var imageUrl = fileChoosePreview.getAttribute('src');
+
+        var newImageType = indexrender.getImageType(imageUrl);
+
+        var listImage = detailSection.getElementsByTagName('img');
+
+        for (var i = 0; i < listImage.length; i++) {
+
+            var currentImageUrl = listImage[i].getAttribute('src');
+
+            var currentImageType = indexrender.getImageType(currentImageUrl);
+
+            var currentDate = new Date();
+            var milisecond = currentDate.getTime();
+
+            var newImageUrl = currentImageUrl.replace(currentImageType, newImageType) + '?' + milisecond;
+
+            listImage[i].setAttribute('src', newImageUrl);
+        }
+
+        detailSection.classList.toggle('is-hidden');
+    },
+
     addEventChooseImage: function () {
 
         var fileInput = document.getElementsByClassName('file-input')[0];
