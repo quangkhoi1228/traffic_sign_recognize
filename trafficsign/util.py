@@ -103,24 +103,29 @@ def cropAndDetectTrafficSign(context):
             cv2.imwrite(saveDetectImageUrl +
                         'contourrestrictedforlargeregion.'+imageType, img2)
 
-            crop = img[b:b+d, a:a+c]
+            crop = img2[b:b+d, a:a+c]
+
             cv2.imwrite(saveDetectImageUrl + 'cropimage.'+imageType, crop)
+
             model = load_model(modelUrl)
             data = []
             image_from_array = Image.fromarray(crop, 'RGB')
+         
             crop = image_from_array.resize((30, 30))
+
             data.append(np.array(crop))
+
             X_test = np.array(data)
+
             X_test = X_test.astype('float32')/255
+
             prediction = model.predict_classes(X_test)
-            cv2.imwrite(saveDetectImageUrl + 'detailcropimage.'+imageType, crop)
 
             return prediction
-
         except:
             print("cannot border box")
             os.remove(saveDetectImageUrl + 'cropimage.'+imageType)
-            cv2.imwrite(saveDetectImageUrl + 'detailcropimage.'+imageType, img)
+            cv2.imwrite(saveDetectImageUrl + 'cropimage.'+imageType, img)
             model = load_model(modelUrl)
             data = []
             image_from_array = Image.fromarray(img, 'RGB')
@@ -130,9 +135,6 @@ def cropAndDetectTrafficSign(context):
             X_test = X_test.astype('float32')/255
             prediction = model.predict_classes(X_test)
             return prediction
-
-        
-        
     except:
         print("Bug when model predict")
         return [10000]
