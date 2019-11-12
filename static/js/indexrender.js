@@ -4,6 +4,18 @@ var indexrender = {
         indexrender.addEventChooseImage();
 
         indexrender.addEventRenderResultTraffic();
+
+        indexrender.addUtilCode();
+    },
+
+    addUtilCode: function () {
+
+        var container = document.getElementById('utilCode');
+
+        util.xhrAdapter.getResource('/static/html/utilcode.html', function (response) {
+
+            container.innerHTML = response;
+        })
     },
 
     addEventRenderResultTraffic: function () {
