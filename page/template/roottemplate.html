@@ -81,9 +81,9 @@
             </div>
         </div>
     </div>
-    <a href="#up" duraction="1000" height-hide="100" easing="easeInOutQuad"
-        class="simplescrollup__button simplescrollup__button--hide"><span class="icon"><i
-                class="fa fa-chevron-up"></i></span>yourtext</a>
+    <a id="top" href="#up" duraction="1000" height-hide="100" easing="easeInOutQuad"
+        class="button is-dark simplescrollup__button simplescrollup__button--hide" style="display: none;"><span
+            class="icon"><i class="fa fa-chevron-up"></i></span></a>
     <div id="confirmPanel" class="modal is-small">
         <div class="modal-background"></div>
         <div class="modal-card">
@@ -112,6 +112,21 @@
                 $(".navbar-burger").toggleClass("is-active");
                 $(".navbar-menu").toggleClass("is-active");
             });
+
+
+            function display() {
+                if ($(document).scrollTop() > 300) {
+                    //$("#top").show();
+                    $("#top").fadeIn(300);
+                } else {
+                    //$("#top").hide();
+                    $("#top").fadeOut(300);
+                }
+            }
+
+            $(window).bind("scroll", display);
+
+
 
         });
     </script>
