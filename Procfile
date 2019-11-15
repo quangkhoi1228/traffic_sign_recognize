@@ -1,2 +1,2 @@
-web: gunicorn trafficsignrecognize.wsgi --log-file -
+web: gunicorn trafficsign.wsgi --log-file -
 
