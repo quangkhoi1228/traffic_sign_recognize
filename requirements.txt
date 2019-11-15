@@ -49,7 +49,7 @@ mccabe==0.6.1
 mistune==0.8.4
 mkl-fft==1.0.6
 mkl-random==1.0.1.1
-mkl-service==2019.0
+mkl-service==0.6.0
 more-itertools==7.2.0
 navigator-updater==0.2.1
 nbconvert==5.6.1
