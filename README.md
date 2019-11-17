@@ -18,6 +18,7 @@
      <li>django 2.2.5</li>
      <li>scikit-image 0.15.0</li>
      <li>tensorflow 2.0.0</li>
+       <li>tensorflow-mkl 1.15.0</li>
      <li>keras 2.2.4</li>
      <li>pillow 6.2.1</li>
 </ul>
