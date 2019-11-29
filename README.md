@@ -50,10 +50,8 @@ Tham khảo source code train file model.h5 tại <a href="https://github.com/qu
 <img src="https://github.com/quangkhoiuit98/trafficsignrecognize/blob/master/static/image/index1.png"><br>
 <br><br>
 <img src="https://github.com/quangkhoiuit98/trafficsignrecognize/blob/master/static/image/index2.png"><br>
-<video  controls>
-  <source src="https://github.com/quangkhoiuit98/trafficsignrecognize/blob/master/static/video/demo.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
+<br><br>
+<img src="https://github.com/quangkhoiuit98/trafficsignrecognize/blob/master/static/image/demo.gif"><br>
 <b>Trang tra cứu biển báo</b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tra cứu biển báo từ dữ liệu của ứng dụng<br><br>
 
