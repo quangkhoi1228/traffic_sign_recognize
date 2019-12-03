@@ -28,7 +28,7 @@ Activate biến môi trường Anaconda 3
 Activate môi trường chứa các packages cần thiết
 <pre>conda activate opencv</pre>
 Di chuyển đến thư mục chứa project
-<pre>cd parentProjectPath/trafficsignrecognize </pre>
+<pre>cd parentProjectPath/traffic_sign_recognize-master </pre>
 Chạy server
 <pre>python manage.py runserver</pre><br>
 Sau khi chạy server thành công truy cập địa chỉ <a href="http://localhost:8000/" target="_blank">localhost:8000</a> để thao tác.
