@@ -10,6 +10,6 @@ numpy==1.17.4
 opencv-python==4.1.1.26
 scikit-image==0.16.2
 tensorflow==2.0.0a0
-Pillow==6.2.1
+Pillow==8.3.2
 
 
