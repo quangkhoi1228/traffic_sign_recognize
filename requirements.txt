@@ -9,7 +9,7 @@ matplotlib==3.1.1
 numpy==1.17.4
 opencv-python==4.1.1.26
 scikit-image==0.16.2
-tensorflow==2.0.0a0
+tensorflow==2.7.2
 Pillow==6.2.1
 
 
